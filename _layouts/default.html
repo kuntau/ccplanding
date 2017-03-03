@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+  <!-- dev:start -->
+  <script>
+    var url = '<script src=\"http:\/\/'
+            + window.location.hostname
+            + ':35729\/livereload.js?snipver=1\"><\/script>';
+    document.write(url);
+  </script>
+  <!-- dev:end -->
+
+</html>
