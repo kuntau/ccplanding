@@ -34,6 +34,18 @@ nav {
 }
 
 .parallax-container {
+  // top: 0;
   height: 100vh;
   // height: 700px;
+}
+
+.jumper {
+  border-radius: 50%;
+  text-align: center;
+  bottom: 100px;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: -100px;
 }
