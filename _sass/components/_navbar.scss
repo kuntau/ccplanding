@@ -110,6 +110,7 @@ nav {
     a {
       transition: background-color .3s;
       font-size: $navbar-font-size;
+      font-weight: $navbar-font-weight;
       color: $navbar-font-color;
       display: block;
       padding: 0 15px;

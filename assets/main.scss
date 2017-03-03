@@ -3,56 +3,37 @@
 ---
 @charset "utf-8";
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// 13. Navigation Bar
+// ==========================================================================
 
-$spacing-unit:     30px;
+$navbar-height: 64px;
+$navbar-font-size: 1rem;
+$navbar-font-weight: 300;
+$navbar-font-color: rgba(255,255,255, 0.8);
+// $navbar-brand-font-size: 2.1rem !default;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-// Minima also includes a mixin for defining media queries.
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-$navbar-font-color: #333;
 
 $roboto-font-path: "/assets/fonts/roboto/" !default;
 // $primary-color: color("teal", "lighten-1");
 @import "materialize";
+
 $primary-color: $cyan;
 nav {
-  background-color: white;
+  background-color: transparent !important;
+  box-shadow: none;
 }
 
 .page-content {
-  margin-top: 30px;
-  .slider {
-    margin-top: -30px;
-  }
+  margin-top: 64px;
 }
 
 .slider {
   .caption {
     text-shadow: 2px 2px 5px rgba(0,0,0, .7);
   }
+}
+
+.parallax-container {
+  height: 100vh;
+  // height: 700px;
 }
