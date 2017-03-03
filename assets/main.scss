@@ -34,6 +34,25 @@ $on-laptop:        800px;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
+$navbar-font-color: #333;
 
-// Import partials from the `minima` theme.
-@import "minima";
+$roboto-font-path: "/assets/fonts/roboto/" !default;
+// $primary-color: color("teal", "lighten-1");
+@import "materialize";
+$primary-color: $cyan;
+nav {
+  background-color: white;
+}
+
+.page-content {
+  margin-top: 30px;
+  .slider {
+    margin-top: -30px;
+  }
+}
+
+.slider {
+  .caption {
+    text-shadow: 2px 2px 5px rgba(0,0,0, .7);
+  }
+}
