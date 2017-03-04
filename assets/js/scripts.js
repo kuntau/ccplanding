@@ -9,7 +9,7 @@ $(document).ready(function() {
   $(".parallax").parallax();
 
   $(".navbar").pushpin({
-    top: 10,
+    top: 50,
     // bottom: 1000,
     offset: 0
   });

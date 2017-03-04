@@ -69,18 +69,12 @@ nav.navbar.pinned {
 #mobile-menu { z-index: 1001; }
 #sidenav-overlay { z-index: 10; }
 
-header {
-  // height: 100vh;
-  // height: $header-height;
-  // height: 100%;
-  // width: 100%;
-  // position: absolute;
-}
-
 .section {
-  // margin-top: $header-height;
-  // padding-top: 70px;
   position: relative;
+  background: white url(../assets/images/pattern-light.png);
+  h2 {
+    text-align: center;
+  }
 }
 
 .parallax-container.parallax-header {
@@ -98,7 +92,7 @@ header {
   width: 100px;
   margin: 0 auto;
   a {
-    color: rgba(255,255,255, 1);
+    color: rgba(255,255,255, 0.8);
     font-size: 5rem;
     line-height: 10px;
     span {
@@ -110,7 +104,8 @@ header {
 }
 
 .content-wrapper {
-  position: relative;
+  // position: relative;
+  height: 100vh;
 }
 
 .back-to-top {
@@ -133,4 +128,8 @@ header {
 .back-to-top:hover {
   background-color: #F26F70;
   color: #fff;
+}
+
+#rakan-kami {
+  background: white url(../assets/images/pattern-light.png);
 }
