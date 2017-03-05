@@ -71,7 +71,7 @@ nav.navbar.pinned {
 
 .section {
   position: relative;
-  background: white url(../assets/images/pattern-light.png);
+  background-image: url(../assets/images/pattern-light.png);
   padding: 100px 0;
   h2 {
     text-align: center;
@@ -79,9 +79,12 @@ nav.navbar.pinned {
 }
 
 #ciri-produk {
-  background: black url(../assets/images/pattern-dark.jpg);
-  h2 {
+  background-image: url(../assets/images/pattern-dark.jpg);
+  h2, h4 {
     color: $navbar-font-color;
+  }
+  h4 {
+    font-weight: 200;
   }
 }
 
@@ -209,12 +212,26 @@ nav.navbar.pinned {
   }
 }
 
+#pembayaran {
+  // background-image: url(../assets/images/pattern-light.png);
+  // position: relative;
+  // background-color: rgba(255,255,255, 0.5);
+  background-image: url(../assets/images/pattern-swirl.png);
+  // height: 800px;
+  // border-bottom: 5px solid rgba(0,0,0, 0.25);
+  ul > li {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 5rem;
+  }
+}
+
 .map-wrapper {
   position: relative;
-  padding-bottom: 75%; // This is the aspect ratio
-  height: 0;
+  padding-bottom: 35%; // This is the aspect ratio
+  // height: 0;
   overflow: hidden;
-  img {
+  iframe {
     position: absolute;
     top: 0;
     left: 0;
