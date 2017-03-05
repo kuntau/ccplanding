@@ -31,6 +31,7 @@ $(document).ready(function() {
   }
 
   smoothScroll();
+
   // $('a[href*="#"]:not([href="#"])').click(function() {
   //     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
   //       var target = $(this.hash);
@@ -44,3 +45,13 @@ $(document).ready(function() {
   //     }
   //   });
 })
+
+function initMap() {
+  var map_options = {
+    center: { lat: 3.207576, lng: 101.7774723 },
+    zoom: 8
+  }
+
+  map_canvas = document.getElementById('map');
+  var map = new google.maps.Map(map_canvas, map_options);
+}

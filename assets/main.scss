@@ -7,14 +7,14 @@
 $navbar-height: 84px;
 $navbar-font-size: 1rem;
 $navbar-font-weight: 300;
-$navbar-font-color: rgba(255,255,255, 1);
+$navbar-font-color: rgba(255,255,255, 0.95);
 // $navbar-brand-font-size: 2.1rem !default;
 
 $parallax-container-height: 700px;
 $header-height: $navbar-height + $parallax-container-height;
 
 
-$roboto-font-path: "/assets/fonts/roboto/" !default;
+$roboto-font-path: "fonts/roboto/" !default;
 // $primary-color: color("teal", "lighten-1");
 @import "materialize";
 @import "font-awesome";
@@ -50,13 +50,13 @@ nav.navbar.pin-top {
 }
 
 nav.navbar.pinned {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: $navbar-font-color;
   height: 52px;
   line-height: 52px;
   li > a {
     color: rgba(0,0,0,0.7);
     &.active {
-      color: green;
+      color: color(light-blue, darken-4);
     }
   }
   .brand-logo img {
@@ -72,8 +72,16 @@ nav.navbar.pinned {
 .section {
   position: relative;
   background: white url(../assets/images/pattern-light.png);
+  padding: 100px 0;
   h2 {
     text-align: center;
+  }
+}
+
+#ciri-produk {
+  background: black url(../assets/images/pattern-dark.jpg);
+  h2 {
+    color: $navbar-font-color;
   }
 }
 
@@ -101,6 +109,54 @@ nav.navbar.pinned {
       margin: 0;
     }
   }
+  -webkit-animation: scroll-down-anim ease-in-out 1s infinite;
+          animation: scroll-down-anim ease-in-out 1s infinite;
+}
+
+@-webkit-keyframes scroll-down-anim {
+    0%,100% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-moz-keyframes scroll-down-anim {
+    0%,100% {
+        -moz-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    50% {
+        -moz-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-o-keyframes scroll-down-anim {
+    0%,100% {
+        -o-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    50% {
+        -o-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes scroll-down-anim {
+    0%,100% {
+        transform: translateY(-8px)
+    }
+
+    50% {
+        transform: translateY(0)
+    }
 }
 
 .content-wrapper {
@@ -126,7 +182,8 @@ nav.navbar.pinned {
 }
 
 .back-to-top:hover {
-  background-color: #F26F70;
+  // background-color: #F26F70;
+  background-color: #FFAB40;
   color: #fff;
 }
 
@@ -136,3 +193,33 @@ nav.navbar.pinned {
     padding: 10px;
   }
 }
+
+.ciri-produk {
+  margin-top: 100px;
+  text-align: center;
+  img {
+    height: 200px;
+    background-color: rgba(255,255,255, 0.95);
+    padding: 10px;
+    border-radius: 50%;
+  }
+  h4 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+
+.map-wrapper {
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+#map { height: 100%; }
