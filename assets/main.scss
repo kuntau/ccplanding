@@ -3,37 +3,223 @@
 ---
 @charset "utf-8";
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+// 13. Navigation Bar
+$navbar-height: 84px;
+$navbar-font-size: 1rem;
+$navbar-font-weight: 300;
+$navbar-font-color: rgba(255,255,255, 0.95);
+// $navbar-brand-font-size: 2.1rem !default;
 
-$spacing-unit:     30px;
+$parallax-container-height: 700px;
+$header-height: $navbar-height + $parallax-container-height;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$roboto-font-path: "fonts/roboto/" !default;
+// $primary-color: color("teal", "lighten-1");
+@import "materialize";
+@import "font-awesome";
 
-// Width of the content area
-$content-width:    800px;
+$primary-color: $cyan;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+body {
+  min-height: 100%;
+  color: #8a909b;
+  -webkit-font-smoothing: subpixel-antialiased;
+  letter-spacing: 1px;
+}
 
-// Minima also includes a mixin for defining media queries.
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
+nav {
+  // top: 0;
+  padding: 0 15px;
+  .brand-logo img {
+    @include transition(all, 0.2s, ease-in-out);
+  }
+  @include transition(background-color, 0.2s, transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955));
+}
+nav.navbar.pin-top {
+  // background-color: rgba(0,0,0, 0.1);
+  box-shadow: none;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(125,185,232,0) 100%);
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(125,185,232,0) 100%);
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(125,185,232,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#007db9e8',GradientType=0 );
+  .brand-logo img {
+    height: 60px;
+    filter: grayscale(100%);
+  }
+}
 
-// Import partials from the `minima` theme.
-@import "minima";
+nav.navbar.pinned {
+  background-color: $navbar-font-color;
+  height: 52px;
+  line-height: 52px;
+  li > a {
+    color: rgba(0,0,0,0.7);
+    &.active {
+      color: color(light-blue, darken-4);
+    }
+  }
+  .brand-logo img {
+    height: 46px;
+    padding-top: 10px;
+  }
+  @include transition(all, 0.2s, linear);
+}
+
+#mobile-menu { z-index: 1001; }
+#sidenav-overlay { z-index: 10; }
+
+.section {
+  position: relative;
+  background: white url(../assets/images/pattern-light.png);
+  padding: 100px 0;
+  h2 {
+    text-align: center;
+  }
+}
+
+#ciri-produk {
+  background: black url(../assets/images/pattern-dark.jpg);
+  h2 {
+    color: $navbar-font-color;
+  }
+}
+
+.parallax-container.parallax-header {
+  // position: static;
+  // height: $parallax-container-height;
+  height: 100vh;
+  margin-top: -$navbar-height;
+  // margin-top: -$navbar-height;
+}
+
+.jumper {
+  position: relative;
+  text-align: center;
+  bottom: 200px;
+  width: 100px;
+  margin: 0 auto;
+  a {
+    color: rgba(255,255,255, 0.8);
+    font-size: 5rem;
+    line-height: 10px;
+    span {
+      font-size: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  -webkit-animation: scroll-down-anim ease-in-out 1s infinite;
+          animation: scroll-down-anim ease-in-out 1s infinite;
+}
+
+@-webkit-keyframes scroll-down-anim {
+    0%,100% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    50% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-moz-keyframes scroll-down-anim {
+    0%,100% {
+        -moz-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    50% {
+        -moz-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@-o-keyframes scroll-down-anim {
+    0%,100% {
+        -o-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    50% {
+        -o-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes scroll-down-anim {
+    0%,100% {
+        transform: translateY(-8px)
+    }
+
+    50% {
+        transform: translateY(0)
+    }
+}
+
+.content-wrapper {
+  // position: relative;
+  height: 100vh;
+}
+
+.back-to-top {
+  position: fixed;
+  z-index: 99999;
+  bottom: 1em;
+  right: 1em;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(40, 40, 46, 0.8);
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: none;
+  @include transition(all, 0.3s, ease-in-out);
+}
+
+.back-to-top:hover {
+  // background-color: #F26F70;
+  background-color: #FFAB40;
+  color: #fff;
+}
+
+.card {
+  text-align: center;
+  img {
+    padding: 10px;
+  }
+}
+
+.ciri-produk {
+  margin-top: 100px;
+  text-align: center;
+  img {
+    height: 200px;
+    background-color: rgba(255,255,255, 0.95);
+    padding: 10px;
+    border-radius: 50%;
+  }
+  h4 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+
+.map-wrapper {
+  position: relative;
+  padding-bottom: 75%; // This is the aspect ratio
+  height: 0;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+#map { height: 100%; }

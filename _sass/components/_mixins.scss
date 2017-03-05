@@ -1,0 +1,12 @@
+// @mixin box-shadow-2($args1, $args2) {
+//     -webkit-box-shadow: $args1, $args2;
+//     -moz-box-shadow: $args1, $args2;
+//     box-shadow: $args1, $args2;
+// }
+
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
