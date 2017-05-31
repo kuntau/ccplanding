@@ -1,5 +1,6 @@
-<footer class="container">
+<footer>
 
+  <div class="container">
   <div class="row">
 
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
@@ -23,24 +24,21 @@
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
           {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
+            <li>1-1A, 1-1B, 1-2A, 1-2B, Jalan UP 1/3,</li>
+            <li>Taman Ukay Perdana, 68000</li>
+            <li>Ampang, Selangor</li>
           {% endif %}
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
         </ul>
       </div>
 
       <div class="footer-copyright">
         <p>{{ site.description | escape }}</p>
+        <p>{{ site.copyright | escape }}</p>
       </div>
     </div>
 
+  </div>
   </div>
 
 </footer>

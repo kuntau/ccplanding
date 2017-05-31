@@ -14,13 +14,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: CityCarPark
-email: your-email@domain.com
+email: cs@citycarpark.my
 description: > # this means to ignore newlines until "baseurl:"
-  CityCarPark, the leading parking solution provider.
+  Citycarpark is a Parking Solution for all the parking problems in Kuala Lumpur.
+copyright: >
+  Hakcipta © 2017. CityCarPark.
+author: Vista Summerose Sdn Bhd
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kuntau
-github_username:  kuntau
+url: "http://stay.kuntau.org" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: citycarpark
+github_username:  citycarpark
 
 # Build settings
 markdown: kramdown

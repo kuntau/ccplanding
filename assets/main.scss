@@ -78,7 +78,7 @@ nav.navbar.pinned {
   }
 }
 
-#ciri-produk {
+#ciri-produk, footer {
   background-image: url(../assets/images/pattern-dark.jpg);
   h2, h4 {
     color: $navbar-font-color;
@@ -240,3 +240,10 @@ nav.navbar.pinned {
   }
 }
 #map { height: 100%; }
+
+footer {
+  margin-top: -26px;
+  h2 {
+    padding-top: 20px;
+  }
+}
