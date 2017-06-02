@@ -78,7 +78,7 @@ nav.navbar.pinned {
   }
 }
 
-#ciri-produk, footer {
+#ciri-produk {
   background-image: url(../assets/images/pattern-dark.jpg);
   h2, h4 {
     color: $navbar-font-color;
@@ -243,6 +243,7 @@ nav.navbar.pinned {
 
 footer {
   margin-top: -26px;
+  background-image: url(../assets/images/pattern-dark.jpg);
   h2 {
     padding-top: 20px;
   }

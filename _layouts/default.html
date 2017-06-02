@@ -90,13 +90,10 @@
 
   </body>
 
-  <!-- dev:start -->
-  <script>
-    var url = '<script src=\"http:\/\/'
-            + window.location.hostname
-            + ':35729\/livereload.js?snipver=1\"><\/script>';
-    document.write(url);
-  </script>
-  <!-- dev:end -->
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+  {% else %}
+    {% include livereload.html %}
+  {% endif %}
 
 </html>
