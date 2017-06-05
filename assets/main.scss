@@ -96,11 +96,29 @@ nav.navbar.pinned {
   // margin-top: -$navbar-height;
 }
 
+#rakan-kamu {
+  position: relative;
+  text-align: center;
+  bottom: 700px;
+  // top: 200px;
+  // width: 100px;
+  margin: 0 auto;
+  h2 {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.4);
+  }
+  .partner {
+    background-color: rgba(0,0,0,0.5);
+  }
+  // -webkit-animation: scroll-down-anim ease-in-out 1s infinite;
+  //         animation: scroll-down-anim ease-in-out 1s infinite;
+}
+
 .jumper {
   position: relative;
   text-align: center;
-  bottom: 200px;
-  width: 100px;
+  bottom: 700px;
+  width: 200px;
   margin: 0 auto;
   a {
     color: rgba(255,255,255, 0.8);
