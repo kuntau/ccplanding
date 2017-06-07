@@ -25,6 +25,8 @@ body {
   min-height: 100%;
   color: #8a909b;
   -webkit-font-smoothing: subpixel-antialiased;
+  // -webkit-transform-style: preserve-3d;
+  // -webkit-backface-visibility: hidden;
   letter-spacing: 1px;
 }
 
@@ -94,6 +96,10 @@ nav.navbar.pinned {
   height: 100vh;
   margin-top: -$navbar-height;
   // margin-top: -$navbar-height;
+  img {
+    // opacity: .9;
+    filter: brightness(70%);
+  }
 }
 
 #rakan-kamu {
@@ -109,6 +115,14 @@ nav.navbar.pinned {
   }
   .partner {
     background-color: rgba(0,0,0,0.5);
+    .card-title {
+      font-weight: 200;
+      // display: none;
+    }
+    a {
+      font-weight: 800;
+      color: rgba(255,255,255,.9);
+    }
   }
   // -webkit-animation: scroll-down-anim ease-in-out 1s infinite;
   //         animation: scroll-down-anim ease-in-out 1s infinite;
