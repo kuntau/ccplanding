@@ -77,7 +77,6 @@ nav.navbar.pinned {
   h2 {
     text-align: center;
   }
-  -webkit-transform-style: preserve-3d(0,0,0);
 }
 
 #ciri-produk {
@@ -134,7 +133,7 @@ nav.navbar.pinned {
   position: relative;
   text-align: center;
   // bottom: 600px;
-  bottom: 65%;
+  bottom: 70%;
   width: 200px;
   margin: 0 auto;
   a {
@@ -282,4 +281,9 @@ footer {
   h2 {
     padding-top: 20px;
   }
+}
+
+/* FIX */
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  margin-right: 0;
 }
