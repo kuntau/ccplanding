@@ -18,7 +18,7 @@ $(document).ready(function() {
 
   function smoothScroll() {
     var scrollEl = $(".smooth-scroll");
-    scrollEl.on("click", function(){
+    scrollEl.on("click", function(event){
       var smoothAnchor = $(this).attr("href");
       event.preventDefault();
 
