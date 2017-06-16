@@ -77,11 +77,14 @@ nav.navbar.pinned {
   h2 {
     text-align: center;
   }
+  #jomparking {
+    background-image: url(../assets/images/pattern-light.png);
+  }
 }
 
 #ciri-produk {
   background-image: url(../assets/images/pattern-dark.jpg);
-  h2, h4 {
+  h2, h3, h4 {
     color: $navbar-font-color;
   }
   h4 {
